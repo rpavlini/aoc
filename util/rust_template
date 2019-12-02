@@ -1,0 +1,27 @@
+fn main() {
+    let input = include_str!("../input");
+
+    first();
+    second();
+}
+
+fn first() -> u32 {
+    return 0;
+}
+
+fn second() -> u32 {
+    return 0;
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::{first, second};
+
+    #[test]
+    fn test() {
+        let input = include_str!("../input.test");
+
+        assert_eq!(first(), 0);
+        assert_eq!(second(), 0);
+    }
+}
