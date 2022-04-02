@@ -83,7 +83,6 @@ fn parse(chars: &mut Chars) -> Option<Packet> {
 
     let val: PacketValue = match type_id_num {
         4 => {
-            //4
             let mut s = String::new();
 
             loop {
@@ -140,11 +139,9 @@ fn parse(chars: &mut Chars) -> Option<Packet> {
     };
 
     return Some(Packet {
-        // p_type: p_type,
         version: bin_str_to_int(&version),
         value: val,
     });
-    // rrrest,
 }
 
 fn sum_versions(p: Packet) -> u64 {
@@ -163,7 +160,6 @@ fn sum_versions(p: Packet) -> u64 {
 }
 
 fn eval_packet(p: &Packet) -> u64 {
-    // println!("{:?}", p);
     match &p.value {
         PacketValue::Lit(v) => *v,
         PacketValue::Op(op, packets) => match op {

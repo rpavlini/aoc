@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  aoc_2021:
+    image: aoc_2021
+    build: .
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/root/app
+

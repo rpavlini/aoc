@@ -99,14 +99,15 @@ fn first(area: &Area) -> u32 {
     let max_y = potential.iter().map(|p| p.max_height).max().unwrap();
 
     println!("{:?}", max_y);
-    return 0;
+    max_y.try_into().unwrap()
 }
 
 fn second(area: &Area) -> u32 {
     let potential = find_potential_pos(area);
 
-    println!("{:?}", potential.len());
-    return 0;
+    let len = potential.len();
+    println!("{:?}", len);
+    return len as u32;
 }
 
 #[cfg(test)]
@@ -122,7 +123,7 @@ mod tests {
             y2: -5,
         };
 
-        assert_eq!(first(&test_area), 0);
-        assert_eq!(second(&test_area), 0);
+        assert_eq!(first(&test_area), 45);
+        assert_eq!(second(&test_area), 112);
     }
 }

@@ -1,0 +1,12 @@
+{
+  "name": "aoc_2021",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "aoc_2021",
+  "workspaceFolder": "/root/app",
+  "shutdownAction": "stopCompose",
+  "extensions": [
+    "esbenp.prettier-vscode",
+    "ms-azuretools.vscode-docker",
+    "matklad.rust-analyzer"
+  ]
+}
