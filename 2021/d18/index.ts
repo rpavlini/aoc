@@ -278,7 +278,7 @@ class TreeReducer {
   }
 }
 
-function one(nums: string): number {
+function first(nums: string): number {
   const reduced = nums
     .split("\n")
     .map((n) => n.trim())
@@ -299,7 +299,7 @@ function one(nums: string): number {
   return magnitude;
 }
 
-function two(nums: string): number {
+function second(nums: string): number {
   const split = nums.split("\n").filter(Boolean);
   const pairs = [];
 
@@ -330,5 +330,5 @@ function two(nums: string): number {
   return max;
 }
 
-one(input);
-two(input);
+first(input);
+second(input);
